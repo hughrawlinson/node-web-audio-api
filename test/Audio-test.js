@@ -41,25 +41,25 @@ describe('Audio tests', function() {
                 done()
             }, 1500);
         })
-        it('should set periodic wave accordingly', function(done) {
-            var oscillatorNode = context.createOscillator()
-            oscillatorNode.connect(context.destination)
-            var real = new Float32Array(3);
-            var imag = new Float32Array(3);
-            real[0] = 0;
-            imag[0] = 0;
-            real[1] = 0.2;
-            real[2] = 1;
-            imag[1] = 0.8;
-            imag[2] = 0;
-            periodicWave = context.createPeriodicWave(real, imag)
-            oscillatorNode.setPeriodicWave(periodicWave)
-            oscillatorNode.frequency.value = 420
-            oscillatorNode.start()
-            setTimeout(function() {
-                done()
-            }, 1500);
-        })
+        // it('should set periodic wave accordingly', function(done) {
+        //     var oscillatorNode = context.createOscillator()
+        //     oscillatorNode.connect(context.destination)
+        //     var real = new Float32Array(3);
+        //     var imag = new Float32Array(3);
+        //     real[0] = 0;
+        //     imag[0] = 0;
+        //     real[1] = 0.2;
+        //     real[2] = 1;
+        //     imag[1] = 0.8;
+        //     imag[2] = 0;
+        //     periodicWave = context.createPeriodicWave(real, imag)
+        //     oscillatorNode.setPeriodicWave(periodicWave)
+        //     oscillatorNode.frequency.value = 420
+        //     oscillatorNode.start()
+        //     setTimeout(function() {
+        //         done()
+        //     }, 1500);
+        // })
     })
     describe('AudioBufferSourceNode', function() {
         it.skip('should output an audio file', function(done) {

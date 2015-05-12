@@ -13,13 +13,13 @@ if(require.main === module){
   var osc = context.createOscillator()
   osc.type = process.argv[2]||"sine"
   var gain = context.createGain()
-  var delay = context.createDelay(0.5)
+  var delay = context.createDelay()
+  delay.delayTime.value = 2
   gain.gain.value = 0.25
-  delay.delayTime.value = 0.5
   osc.connect(delay)
   osc.connect(gain)
   delay.connect(gain)
   gain.connect(context.destination)
   osc.start(0)
-  osc.stop(context.currentTime+0.25)
+  osc.stop(context.currentTime+1)
 }

@@ -159,8 +159,9 @@ Contributors
 -------------
 
 ```
-    61	Sébastien Piquemal
-    16	ouhouhsami
+    80	Sébastien Piquemal
+    21	ouhouhsami
+     9	Hugh Rawlinson
      4	John Wnek
      2	anprogrammer
      1	Andrew Petersen
